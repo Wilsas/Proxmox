@@ -29,6 +29,7 @@ apt-get -y purge openssh-{client,server} >/dev/null
 apt-get autoremove >/dev/null
 
 msg "Updating container OS..."
+    apt update &>/dev/null
 
 msg "Installing prerequisites..."
 apt-get -qqy install \
